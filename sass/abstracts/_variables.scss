@@ -1,0 +1,41 @@
+// MAX-WIDTH
+$width-1400: 1400px;
+
+// COLORS
+$color-primary: #333;
+$color-secondary: #999;
+$color-tertiary: #ddd;
+
+$color-white: #fff;
+$color-black: #000;
+
+// FONT
+$font-family-default: "Urbanist", sans-serif;
+
+$font-size-x-small: 1.2rem;
+
+$font-size-small: 1.5rem;
+$font-size-medium: 1.7rem;
+$font-size-upper-medium: 2.4rem;
+$font-size-large: 3.2rem;
+$font-size-x-large: 4rem;
+$font-size-max-48: clamp(2.4rem, 4vw, 4.8rem);
+$font-size-max-60: clamp(3rem, 5vw, 6rem);
+$font-size-max-130: 130px;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+// TYPOGRAPHY
+$line-height-tiny: 1.15;
+$line-height-small: 1.2;
+$line-height-medium: 1.6;
+$line-height-normal: 1.8;
+
+// MARGIN
+$margin-x-small: 1rem;
+$margin-small: 2.4rem;
+$margin-medium: 5rem;

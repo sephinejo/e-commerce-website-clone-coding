@@ -1,0 +1,61 @@
+.btn {
+  &:link,
+  &:visited {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    word-break: break-word;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    border-radius: 3.5rem;
+    position: relative;
+  }
+
+  &-border {
+    font-family: inherit;
+    font-size: $font-size-small;
+    font-weight: $font-weight-semi-bold;
+    color: $color-white;
+    background-color: transparent;
+    letter-spacing: 1.5px;
+    line-height: inherit;
+    border: 2px solid $color-white;
+    border-radius: 35px;
+    padding: 19.5px 44px;
+    margin-top: 24px;
+  }
+
+  &-chevron-left {
+    border: solid 2px $color-black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $color-black;
+
+    &-icon {
+      stroke: $color-white;
+      stroke-width: 4;
+      width: 11.3px;
+      height: 11.3px;
+    }
+  }
+
+  &-chevron-right {
+    border: solid 2px $color-black;
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: transparent;
+    margin-left: $margin-x-small;
+
+    &-icon {
+      stroke: $color-black;
+      stroke-width: 4;
+      width: 11.3px;
+      height: 11.3px;
+    }
+  }
+}

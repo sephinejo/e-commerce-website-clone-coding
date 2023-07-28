@@ -1,0 +1,251 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; }
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px; }
+
+body {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  color: #000; }
+
+.header-white .header-logo-text {
+  color: #fff; }
+
+.header-white .header-btns a,
+.header-white .header-btns button {
+  color: #fff; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-right-20 {
+  margin-right: 20px; }
+
+.u-margin-right-10 {
+  margin-right: 10px; }
+
+.u-section-separator {
+  border-top: 1px solid #000;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 2.4rem; }
+
+.btn:link, .btn:visited {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  word-break: break-word;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  border-radius: 3.5rem;
+  position: relative; }
+
+.btn-border {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: transparent;
+  letter-spacing: 1.5px;
+  line-height: inherit;
+  border: 2px solid #fff;
+  border-radius: 35px;
+  padding: 19.5px 44px;
+  margin-top: 24px; }
+
+.btn-chevron-left {
+  border: solid 2px #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000; }
+  .btn-chevron-left-icon {
+    stroke: #fff;
+    stroke-width: 4;
+    width: 11.3px;
+    height: 11.3px; }
+
+.btn-chevron-right {
+  border: solid 2px #000;
+  width: 70px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: transparent;
+  margin-left: 1rem; }
+  .btn-chevron-right-icon {
+    stroke: #000;
+    stroke-width: 4;
+    width: 11.3px;
+    height: 11.3px; }
+
+.header {
+  height: 10vh;
+  background-color: transparent; }
+  .header-home {
+    height: 100vh;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), URL("https://demo.vivathemes.com/vignette/wp-content/themes/vignette/assets/images/furniture.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    padding: 0 50px 100px; }
+  .header-logo-and-btns-block {
+    position: relative;
+    height: 21rem;
+    padding-bottom: 70px; }
+  .header-logo-block {
+    height: 14rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+  .header-logo-box {
+    width: 80px;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0 0 40px 40px;
+    padding: 15px;
+    padding-top: 25px; }
+  .header-logo {
+    height: 50px; }
+  .header-logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 1.8; }
+  .header-btns {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; }
+    .header-btns-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+  .header-btn-menu {
+    width: 42px;
+    height: 13px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .header-btn-menu-top {
+      border: 1px solid #fff;
+      width: 42px; }
+    .header-btn-menu-bottom {
+      border: 1px solid #fff;
+      width: 30px; }
+  .header-btns-box {
+    display: flex; }
+  .header-btn-icon {
+    width: 24px; }
+  .header-banner {
+    color: #fff; }
+    .header-banner-title {
+      width: 40%;
+      font-family: "Urbanist", sans-serif;
+      font-size: 130px;
+      font-weight: 600;
+      line-height: 1; }
+    .header-banner-text {
+      width: 50%;
+      font-size: 1.7rem;
+      line-height: 2;
+      margin: 2.4rem 0 2.8rem; }
+
+.brands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 0; }
+  .brands-text {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #999;
+    margin-bottom: 2.4rem; }
+  .brands-block {
+    width: 60%;
+    height: 12.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem; }
+    .brands-block .brand {
+      width: 15rem; }
+      .brands-block .brand-vogue {
+        width: 23rem; }
+      .brands-block .brand-img {
+        width: 100%; }
+
+.home-products-title-and-btns {
+  display: flex;
+  justify-content: space-between; }
+
+.home-products {
+  padding: 20px 0; }
+  .home-products-block {
+    margin: 2.4rem 0; }
+  .home-products-title-and-btns {
+    margin-top: 2.4rem 0; }
+  .home-products-title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 2.4rem; }
+  .home-products-btns {
+    display: flex;
+    flex-direction: row; }
+  .home-products-box {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 5rem; }
+    .home-products-box .home-product-img-box {
+      width: 30.9rem;
+      height: 30.9rem;
+      position: relative; }
+      .home-products-box .home-product-img-box .sale-badge {
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #000;
+        background-color: #fff;
+        padding: 7px 8px;
+        position: absolute;
+        top: 10px;
+        right: 10px; }
+    .home-products-box .home-product-img {
+      width: 100%;
+      height: 100%; }
+    .home-products-box .home-product-title {
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      font-weight: 500; }
+    .home-products-box .home-product-price {
+      font-size: 1.5rem; }
+      .home-products-box .home-product-price-original {
+        text-decoration-line: line-through;
+        margin-right: 3px; }

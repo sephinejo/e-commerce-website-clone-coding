@@ -1,0 +1,112 @@
+.brands {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 0;
+
+  &-text {
+    font-size: $font-size-large;
+    font-weight: $font-weight-semi-bold;
+    color: $color-secondary;
+    margin-bottom: $margin-small;
+  }
+
+  &-block {
+    width: 60%;
+    height: 12.6rem;
+    // margin-top: $margin-small;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    .brand {
+      width: 15rem;
+
+      &-vogue {
+        width: 23rem;
+      }
+
+      &-img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.home-products-title-and-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-products {
+  padding: 20px 0;
+
+  &-block {
+    margin: $margin-small 0;
+  }
+
+  &-title-and-btns {
+    margin-top: $margin-small 0;
+  }
+
+  &-title {
+    font-size: $font-size-large;
+    font-weight: $font-weight-semi-bold;
+    line-height: $line-height-tiny;
+    margin-bottom: $margin-small;
+  }
+
+  &-btns {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &-box {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: $margin-medium;
+
+    .home-product {
+      &-img-box {
+        width: 30.9rem;
+        height: 30.9rem;
+        position: relative;
+
+        .sale-badge {
+          font-size: $font-size-x-small;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: $color-black;
+          background-color: $color-white;
+          padding: 7px 8px;
+
+          position: absolute;
+          top: 10px;
+          right: 10px;
+        }
+      }
+
+      &-img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &-title {
+        text-transform: uppercase;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-medium;
+      }
+
+      &-price {
+        font-size: $font-size-small;
+
+        &-original {
+          text-decoration-line: line-through;
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+}
