@@ -14,7 +14,6 @@
   &-block {
     width: 60%;
     height: 12.6rem;
-    // margin-top: $margin-small;
 
     display: flex;
     justify-content: center;
@@ -41,7 +40,7 @@
 }
 
 .home-products {
-  padding: 20px 0;
+  padding: 20px 0 100px;
 
   &-block {
     margin: $margin-small 0;
@@ -64,49 +63,184 @@
   }
 
   &-box {
-    display: flex;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: $margin-small;
+
     margin-bottom: $margin-medium;
+  }
+}
 
-    .home-product {
-      &-img-box {
-        width: 30.9rem;
-        height: 30.9rem;
-        position: relative;
+.custom-features {
+  height: 90vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("https://demo.vivathemes.com/vignette/wp-content/themes/vignette/assets/images/livingroom.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  color: $color-white;
 
-        .sale-badge {
-          font-size: $font-size-x-small;
-          font-weight: 400;
-          text-transform: uppercase;
-          color: $color-black;
-          background-color: $color-white;
-          padding: 7px 8px;
+  position: relative;
 
-          position: absolute;
-          top: 10px;
-          right: 10px;
-        }
-      }
+  &-inner-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
 
-      &-img {
-        width: 100%;
-        height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-title {
+    font-size: $font-size-large;
+    font-weight: $font-weight-semi-bold;
+    line-height: $line-height-tiny;
+  }
+
+  &-block {
+    width: 35rem;
+
+    .sub-title {
+      font-size: $font-size-upper-medium;
+      font-weight: $font-weight-semi-bold;
+      line-height: $line-height-tiny;
+      margin-top: $margin-x-small;
+    }
+
+    .description {
+      font-size: $font-size-medium;
+      line-height: $line-height-normal;
+      margin-top: $margin-small;
+    }
+  }
+
+  &-line {
+    height: 7rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    margin: $margin-small 0;
+  }
+}
+
+.learn-more-and-video {
+  display: flex;
+  flex-direction: column;
+
+  &-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8rem;
+    height: 50rem;
+    margin: $margin-large 0;
+
+    .learn-more {
+      &-container {
+        width: 40rem;
+        margin-top: $margin-medium;
       }
 
       &-title {
-        text-transform: uppercase;
-        font-size: $font-size-medium;
-        font-weight: $font-weight-medium;
+        font-size: $font-size-large;
+        font-weight: $font-weight-semi-bold;
+        line-height: $line-height-tiny;
       }
 
-      &-price {
-        font-size: $font-size-small;
+      &-description {
+        max-width: 84rem;
+        font-size: $font-size-medium;
+        font-weight: 400;
+        line-height: $line-height-normal;
+        margin-top: $margin-small;
+      }
 
-        &-original {
-          text-decoration-line: line-through;
-          margin-right: 3px;
+      &-video-container {
+        height: 50rem;
+
+        .video {
+          width: 100%;
+          height: 100%;
+          border-radius: 25px;
+          object-fit: cover;
         }
       }
+    }
+  }
+}
+
+.shop-by-category {
+  display: flex;
+  flex-direction: column;
+  margin: $margin-medium 0 $margin-large;
+
+  &-title {
+    font-size: $font-size-large;
+    font-weight: $font-weight-semi-bold;
+    line-height: $line-height-tiny;
+    margin-bottom: $margin-small;
+  }
+
+  &-block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem;
+  }
+
+  &-product {
+    height: 36rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    object-fit: none;
+    background-position: 50% 50%;
+
+    &.chairs {
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.4)
+        ),
+        url("https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/khloe-arledge-8Rz_RIyp5FM-unsplash-683x1024.jpg");
+    }
+
+    &.kitchen {
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.4)
+        ),
+        url("https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/collov-home-design-aDGbdTsBZg-unsplash-768x1024.jpg");
+    }
+
+    &.sofas {
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.4)
+        ),
+        url("https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/lui-peng-8NxTrV6i4WQ-unsplash-683x1024.jpg");
+    }
+
+    &.tables {
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.4)
+        ),
+        url("https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/minh-pham-OtXADkUh3-I-unsplash-683x1024.jpg");
+    }
+
+    &-title {
+      color: $color-white;
+      font-size: $font-size-large;
+      font-weight: $font-weight-semi-bold;
     }
   }
 }

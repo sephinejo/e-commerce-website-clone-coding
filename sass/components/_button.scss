@@ -1,6 +1,8 @@
 .btn {
+  &,
   &:link,
   &:visited {
+    font-family: inherit;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
@@ -10,22 +12,24 @@
     border: none;
     background-color: transparent;
     display: inline-block;
-    border-radius: 3.5rem;
-    position: relative;
   }
 
   &-border {
-    font-family: inherit;
     font-size: $font-size-small;
     font-weight: $font-weight-semi-bold;
     color: $color-white;
-    background-color: transparent;
     letter-spacing: 1.5px;
     line-height: inherit;
     border: 2px solid $color-white;
     border-radius: 35px;
     padding: 19.5px 44px;
     margin-top: 24px;
+
+    &-black {
+      color: $color-white;
+      background-color: $color-black;
+      border: none;
+    }
   }
 
   &-chevron-left {

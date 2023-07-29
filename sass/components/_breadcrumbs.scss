@@ -1,0 +1,13 @@
+.breadcrumbs {
+  margin-bottom: 1.5rem;
+
+  .prev,
+  .current {
+    font-size: $font-size-small;
+  }
+
+  .prev {
+    color: #767676;
+    cursor: pointer;
+  }
+}

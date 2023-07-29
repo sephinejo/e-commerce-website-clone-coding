@@ -17,6 +17,11 @@ body {
   margin: 0 auto;
   padding: 0 50px; }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer; }
+
 body {
   font-family: "Urbanist", sans-serif;
   font-weight: 400;
@@ -24,6 +29,10 @@ body {
 
 .header-white .header-logo-text {
   color: #fff; }
+
+.header-white .header-btn-menu-top,
+.header-white .header-btn-menu-bottom {
+  border: 1px solid #fff; }
 
 .header-white .header-btns a,
 .header-white .header-btns button {
@@ -41,10 +50,26 @@ body {
 .u-section-separator {
   border-top: 1px solid #000;
   width: 100%;
-  height: 20px;
   margin-bottom: 2.4rem; }
 
-.btn:link, .btn:visited {
+.u-separator {
+  width: 100%;
+  border-top: solid 1px #ddd; }
+
+.u-gray {
+  color: #999; }
+
+.breadcrumbs {
+  margin-bottom: 1.5rem; }
+  .breadcrumbs .prev,
+  .breadcrumbs .current {
+    font-size: 15px; }
+  .breadcrumbs .prev {
+    color: #767676;
+    cursor: pointer; }
+
+.btn, .btn:link, .btn:visited {
+  font-family: inherit;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -53,22 +78,22 @@ body {
   outline: none;
   border: none;
   background-color: transparent;
-  display: inline-block;
-  border-radius: 3.5rem;
-  position: relative; }
+  display: inline-block; }
 
 .btn-border {
-  font-family: inherit;
-  font-size: 1.5rem;
+  font-size: 15px;
   font-weight: 600;
   color: #fff;
-  background-color: transparent;
   letter-spacing: 1.5px;
   line-height: inherit;
   border: 2px solid #fff;
   border-radius: 35px;
   padding: 19.5px 44px;
   margin-top: 24px; }
+  .btn-border-black {
+    color: #fff;
+    background-color: #000;
+    border: none; }
 
 .btn-chevron-left {
   border: solid 2px #000;
@@ -95,10 +120,85 @@ body {
     width: 11.3px;
     height: 11.3px; }
 
+.product {
+  cursor: pointer; }
+  .product-img-box {
+    position: relative;
+    margin-bottom: 1rem; }
+    .product-img-box .sale-badge {
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #000;
+      background-color: #fff;
+      padding: 3px 5px;
+      position: absolute;
+      top: 10px;
+      right: 10px; }
+  .product-img {
+    width: 100%;
+    height: 100%; }
+  .product-title {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 0.5rem; }
+  .product-price {
+    font-size: 15px; }
+    .product-price-original {
+      color: #999;
+      text-decoration-line: line-through;
+      margin-right: 3px; }
+
+.footer {
+  background-color: #000;
+  color: #ccc;
+  padding: 16rem 5rem 8rem; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+    .footer-top .menu-block {
+      height: 22rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+    .footer-top .menu-title {
+      font-size: 24px;
+      font-weight: 400; }
+    .footer-top .menu-link {
+      font-size: 17px;
+      text-align: left; }
+    .footer-top .social-links {
+      display: flex; }
+      .footer-top .social-links .social-link {
+        width: 8.8rem;
+        height: 4.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #999; }
+        .footer-top .social-links .social-link-icon {
+          font-size: 24px; }
+  .footer-bottom {
+    font-size: 17px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10rem; }
+  .footer .policy-and-contact-block {
+    margin-bottom: 1rem; }
+    .footer .policy-and-contact-block .policy {
+      margin-right: 2.4rem; }
+  .footer-payments {
+    height: 2.85rem;
+    margin-top: 2.4rem; }
+
 .header {
   height: 10vh;
-  background-color: transparent; }
+  background-color: transparent;
+  margin-bottom: 12rem; }
   .header-home {
+    margin-bottom: 0;
     height: 100vh;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), URL("https://demo.vivathemes.com/vignette/wp-content/themes/vignette/assets/images/furniture.jpg");
     background-size: cover;
@@ -127,7 +227,8 @@ body {
     padding: 15px;
     padding-top: 25px; }
   .header-logo {
-    height: 50px; }
+    height: 50px;
+    cursor: pointer; }
   .header-logo-text {
     font-size: 22px;
     font-weight: 700;
@@ -154,15 +255,32 @@ body {
     flex-direction: column;
     justify-content: space-between; }
     .header-btn-menu-top {
-      border: 1px solid #fff;
+      border: 1px solid #000;
       width: 42px; }
     .header-btn-menu-bottom {
-      border: 1px solid #fff;
+      border: 1px solid #000;
       width: 30px; }
   .header-btns-box {
     display: flex; }
   .header-btn-icon {
     width: 24px; }
+    .header-btn-icon .icon-cart {
+      z-index: -1; }
+  .header-btn-cart {
+    position: relative; }
+    .header-btn-cart .header-cart-number {
+      font-family: inherit;
+      font-size: 15px;
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -9px;
+      right: -9px; }
   .header-banner {
     color: #fff; }
     .header-banner-title {
@@ -173,7 +291,7 @@ body {
       line-height: 1; }
     .header-banner-text {
       width: 50%;
-      font-size: 1.7rem;
+      font-size: 17px;
       line-height: 2;
       margin: 2.4rem 0 2.8rem; }
 
@@ -183,7 +301,7 @@ body {
   align-items: center;
   padding: 10rem 0; }
   .brands-text {
-    font-size: 3.2rem;
+    font-size: 32px;
     font-weight: 600;
     color: #999;
     margin-bottom: 2.4rem; }
@@ -206,13 +324,13 @@ body {
   justify-content: space-between; }
 
 .home-products {
-  padding: 20px 0; }
+  padding: 20px 0 100px; }
   .home-products-block {
     margin: 2.4rem 0; }
   .home-products-title-and-btns {
     margin-top: 2.4rem 0; }
   .home-products-title {
-    font-size: 3.2rem;
+    font-size: 32px;
     font-weight: 600;
     line-height: 1.15;
     margin-bottom: 2.4rem; }
@@ -220,32 +338,245 @@ body {
     display: flex;
     flex-direction: row; }
   .home-products-box {
-    display: flex;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2.4rem;
     margin-bottom: 5rem; }
-    .home-products-box .home-product-img-box {
-      width: 30.9rem;
-      height: 30.9rem;
-      position: relative; }
-      .home-products-box .home-product-img-box .sale-badge {
-        font-size: 1.2rem;
-        font-weight: 400;
+
+.custom-features {
+  height: 90vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://demo.vivathemes.com/vignette/wp-content/themes/vignette/assets/images/livingroom.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  color: #fff;
+  position: relative; }
+  .custom-features-inner-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .custom-features-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.15; }
+  .custom-features-block {
+    width: 35rem; }
+    .custom-features-block .sub-title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.15;
+      margin-top: 1rem; }
+    .custom-features-block .description {
+      font-size: 17px;
+      line-height: 1.8;
+      margin-top: 2.4rem; }
+  .custom-features-line {
+    height: 7rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 2.4rem 0; }
+
+.learn-more-and-video {
+  display: flex;
+  flex-direction: column; }
+  .learn-more-and-video-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8rem;
+    height: 50rem;
+    margin: 10rem 0; }
+    .learn-more-and-video-box .learn-more-container {
+      width: 40rem;
+      margin-top: 5rem; }
+    .learn-more-and-video-box .learn-more-title {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.15; }
+    .learn-more-and-video-box .learn-more-description {
+      max-width: 84rem;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.8;
+      margin-top: 2.4rem; }
+    .learn-more-and-video-box .learn-more-video-container {
+      height: 50rem; }
+      .learn-more-and-video-box .learn-more-video-container .video {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        object-fit: cover; }
+
+.shop-by-category {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 0 10rem; }
+  .shop-by-category-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 2.4rem; }
+  .shop-by-category-block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1rem; }
+  .shop-by-category-product {
+    height: 36rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    object-fit: none;
+    background-position: 50% 50%; }
+    .shop-by-category-product.chairs {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/khloe-arledge-8Rz_RIyp5FM-unsplash-683x1024.jpg"); }
+    .shop-by-category-product.kitchen {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/collov-home-design-aDGbdTsBZg-unsplash-768x1024.jpg"); }
+    .shop-by-category-product.sofas {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/lui-peng-8NxTrV6i4WQ-unsplash-683x1024.jpg"); }
+    .shop-by-category-product.tables {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/minh-pham-OtXADkUh3-I-unsplash-683x1024.jpg"); }
+    .shop-by-category-product-title {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 600; }
+
+.product-detail {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  margin-bottom: 10rem; }
+  .product-detail-imgs-block {
+    display: flex;
+    gap: 0.5rem; }
+    .product-detail-imgs-block .sub-imgs {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem; }
+      .product-detail-imgs-block .sub-imgs .sub-img-box {
+        width: 12.7rem;
+        height: 12.7rem; }
+    .product-detail-imgs-block .main-img-box {
+      width: 65rem;
+      height: 65rem;
+      object-fit: cover; }
+  .product-detail .product-detail-info {
+    width: 45rem;
+    height: 48rem;
+    margin: 0 auto; }
+    .product-detail .product-detail-info .product-title {
+      text-transform: none;
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 10px; }
+    .product-detail .product-detail-info .ratings-box {
+      display: flex; }
+      .product-detail .product-detail-info .ratings-box .rating-icon {
+        font-size: 17px;
+        color: #fcb900;
+        margin-bottom: 1rem; }
+    .product-detail .product-detail-info .product-price {
+      margin: 17px 0 24px; }
+    .product-detail .product-detail-info .btn-quantity-and-add-to-cart-box {
+      display: flex; }
+      .product-detail .product-detail-info .btn-quantity-and-add-to-cart-box .quantity {
+        width: 10rem;
+        height: 5rem;
+        font-size: 17px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid #000; }
+      .product-detail .product-detail-info .btn-quantity-and-add-to-cart-box .btn-add-to-cart {
+        width: 22.5rem;
+        height: 5rem;
+        color: #fff;
+        background-color: #000;
+        line-height: 120%;
+        font-size: 15px;
         text-transform: uppercase;
-        color: #000;
-        background-color: #fff;
-        padding: 7px 8px;
-        position: absolute;
-        top: 10px;
-        right: 10px; }
-    .home-products-box .home-product-img {
-      width: 100%;
-      height: 100%; }
-    .home-products-box .home-product-title {
-      text-transform: uppercase;
-      font-size: 1.7rem;
-      font-weight: 500; }
-    .home-products-box .home-product-price {
-      font-size: 1.5rem; }
-      .home-products-box .home-product-price-original {
-        text-decoration-line: line-through;
-        margin-right: 3px; }
+        font-weight: 600; }
+    .product-detail .product-detail-info .product-code-and-categories {
+      color: #999;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 150%;
+      display: flex;
+      flex-direction: column;
+      margin: 40px 0; }
+    .product-detail .product-detail-info .product-description-and-reviews-box .description-box,
+    .product-detail .product-detail-info .product-description-and-reviews-box .reviews-box {
+      font-size: 15px;
+      font-weight: 400;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13px 1px; }
+
+.related-products {
+  background-color: rgba(221, 221, 221, 0.2);
+  padding: 10rem; }
+  .related-products-title {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 2.4rem; }
+  .related-products-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5rem; }
+  .related-products .product-img-box {
+    width: 40rem;
+    height: 40rem;
+    margin-bottom: 1rem; }
+
+.shop .title-and-sorting-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.4rem; }
+  .shop .title-and-sorting-block .title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 2.4rem;
+    padding-top: 10px; }
+  .shop .title-and-sorting-block .sorting {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 400;
+    width: 240px;
+    height: 40px;
+    border: 1px solid #000;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0 30px 0 18px; }
+
+.shop-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 54rem 54rem 54rem;
+  column-gap: 5rem; }
+
+.shop-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12rem; }
+  .shop-btns .btn-shop {
+    color: #000;
+    font-size: 17px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #000;
+    margin-right: 0.5rem; }
+    .shop-btns .btn-shop.active {
+      color: #fff;
+      background-color: #000; }

@@ -1,0 +1,126 @@
+.product-detail {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  margin-bottom: $margin-large;
+
+  &-imgs-block {
+    display: flex;
+    gap: $gap-small;
+
+    .sub-imgs {
+      display: flex;
+      flex-direction: column;
+      gap: $gap-small;
+
+      .sub-img-box {
+        width: 12.7rem;
+        height: 12.7rem;
+      }
+    }
+
+    .main-img-box {
+      width: 65rem;
+      height: 65rem;
+      object-fit: cover;
+    }
+  }
+
+  .product-detail-info {
+    width: 45rem;
+    height: 48rem;
+    margin: 0 auto;
+
+    .product-title {
+      text-transform: none;
+      font-size: $font-size-upper-medium;
+      font-weight: $font-weight-semi-bold;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    .ratings-box {
+      display: flex;
+
+      .rating-icon {
+        font-size: $font-size-medium;
+        color: $color-amber;
+        margin-bottom: $margin-x-small;
+      }
+    }
+
+    .product-price {
+      margin: 17px 0 24px;
+    }
+
+    .btn-quantity-and-add-to-cart-box {
+      display: flex;
+
+      .quantity {
+        width: 10rem;
+        height: 5rem;
+        font-size: $font-size-medium;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid $color-black;
+      }
+
+      .btn-add-to-cart {
+        width: 22.5rem;
+        height: 5rem;
+        color: $color-white;
+        background-color: $color-black;
+        line-height: 120%;
+        font-size: $font-size-small;
+        text-transform: uppercase;
+        font-weight: $font-weight-semi-bold;
+      }
+    }
+
+    .product-code-and-categories {
+      color: $color-secondary;
+      font-size: $font-size-small;
+      font-weight: $font-weight-regular;
+      line-height: 150%;
+      display: flex;
+      flex-direction: column;
+      margin: 40px 0;
+    }
+
+    .product-description-and-reviews-box {
+      .description-box,
+      .reviews-box {
+        font-size: $font-size-small;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 13px 1px;
+      }
+    }
+  }
+}
+
+.related-products {
+  background-color: rgba($color-tertiary, 0.2);
+  padding: $margin-large;
+
+  &-title {
+    font-size: $font-size-large;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-tiny;
+    margin-bottom: $margin-small;
+  }
+
+  &-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: $margin-medium;
+  }
+
+  .product-img-box {
+    width: 40rem;
+    height: 40rem;
+    margin-bottom: $margin-x-small;
+  }
+}

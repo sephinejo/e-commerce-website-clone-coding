@@ -13,6 +13,14 @@
 .u-section-separator {
   border-top: 1px solid $color-black;
   width: 100%;
-  height: 20px;
   margin-bottom: $margin-small;
+}
+
+.u-separator {
+  width: 100%;
+  border-top: solid 1px $color-tertiary;
+}
+
+.u-gray {
+  color: $color-secondary;
 }

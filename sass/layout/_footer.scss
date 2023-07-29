@@ -1,0 +1,65 @@
+.footer {
+  background-color: $color-black;
+  color: $color-footer;
+  padding: 16rem 5rem 8rem;
+
+  &-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .menu-block {
+      height: 22rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .menu-title {
+      font-size: $font-size-upper-medium;
+      font-weight: 400;
+    }
+
+    .menu-link {
+      font-size: $font-size-medium;
+      text-align: left;
+    }
+
+    .social-links {
+      display: flex;
+
+      .social-link {
+        width: 8.8rem;
+        height: 4.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $color-secondary;
+
+        &-icon {
+          font-size: $font-size-upper-medium;
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    font-size: $font-size-medium;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: $margin-large;
+  }
+
+  .policy-and-contact-block {
+    margin-bottom: $margin-x-small;
+
+    .policy {
+      margin-right: $margin-small;
+    }
+  }
+
+  &-payments {
+    height: 2.85rem;
+    margin-top: $margin-small;
+  }
+}

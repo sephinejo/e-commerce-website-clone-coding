@@ -5,22 +5,24 @@ $width-1400: 1400px;
 $color-primary: #333;
 $color-secondary: #999;
 $color-tertiary: #ddd;
+$color-footer: #ccc;
 
 $color-white: #fff;
 $color-black: #000;
 
+$color-amber: #fcb900;
+
 // FONT
 $font-family-default: "Urbanist", sans-serif;
 
-$font-size-x-small: 1.2rem;
-
-$font-size-small: 1.5rem;
-$font-size-medium: 1.7rem;
-$font-size-upper-medium: 2.4rem;
-$font-size-large: 3.2rem;
-$font-size-x-large: 4rem;
-$font-size-max-48: clamp(2.4rem, 4vw, 4.8rem);
-$font-size-max-60: clamp(3rem, 5vw, 6rem);
+$font-size-x-small: 12px;
+$font-size-small: 15px;
+$font-size-medium: 17px;
+$font-size-upper-medium: 24px;
+$font-size-large: 32px;
+$font-size-x-large: 40px;
+$font-size-max-48: clamp(24px, 4vw, 48px);
+$font-size-max-60: clamp(30px, 5vw, 60px);
 $font-size-max-130: 130px;
 
 $font-weight-light: 300;
@@ -36,6 +38,12 @@ $line-height-medium: 1.6;
 $line-height-normal: 1.8;
 
 // MARGIN
+$margin-2x-small: 0.5rem;
 $margin-x-small: 1rem;
 $margin-small: 2.4rem;
 $margin-medium: 5rem;
+$margin-large: 10rem;
+$margin-x-large: 12rem;
+
+// GAP
+$gap-small: 0.5rem;

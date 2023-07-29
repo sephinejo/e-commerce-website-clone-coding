@@ -9,6 +9,11 @@ body {
     color: $color-white;
   }
 
+  .header-btn-menu-top,
+  .header-btn-menu-bottom {
+    border: 1px solid $color-white;
+  }
+
   .header-btns a,
   .header-btns button {
     color: $color-white;

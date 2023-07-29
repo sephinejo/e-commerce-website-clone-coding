@@ -7,9 +7,14 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/breadcrumbs";
 @import "components/button";
+@import "components/product";
 
+@import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
 
 @import "pages/home";
+@import "pages/product-detail";
+@import "pages/shop";
