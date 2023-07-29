@@ -1,0 +1,54 @@
+.learn-more-and-contact-form-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8rem;
+  height: 71rem;
+  margin: $margin-large 0;
+
+  .learn-more {
+    &-container {
+      width: 40rem;
+      margin-top: $margin-medium;
+    }
+    &-title {
+      font-size: $font-size-large;
+      font-weight: $font-weight-semi-bold;
+      line-height: $line-height-tiny;
+    }
+    &-description {
+      // max-width: 84rem;
+      font-size: $font-size-medium;
+      font-weight: 400;
+      line-height: $line-height-normal;
+      margin-top: $margin-small;
+    }
+  }
+
+  .contact-form {
+    &-title {
+      font-size: $font-size-upper-medium;
+      font-weight: $font-weight-medium;
+      line-height: $line-height-tiny;
+      margin-bottom: $margin-medium;
+    }
+
+    &-input {
+      margin-top: 16px;
+      label {
+        display: block;
+        font-size: 16px;
+        font-weight: $font-weight-regular;
+        margin-bottom: $margin-2x-small;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        font-family: $font-family-default;
+        padding: 14px 8px;
+        border: 1px solid $color-tertiary;
+        margin-top: 3px;
+      }
+    }
+  }
+}

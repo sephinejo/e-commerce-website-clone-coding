@@ -218,6 +218,16 @@ body {
       height: 100%;
       object-fit: cover;
       z-index: -2; }
+  .header-contact {
+    height: 50vh;
+    margin-bottom: 0;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/slidebean-6MtJ-y1hzTs-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%; }
+    .header-contact-container {
+      width: 100%;
+      height: 100%; }
   .header-logo-and-btns-block {
     height: 21rem;
     padding-bottom: 70px; }
@@ -297,12 +307,22 @@ body {
       right: -9px; }
   .header-banner {
     color: #fff; }
+    .header-banner-contact {
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
     .header-banner-title {
       width: 40%;
       font-family: "Urbanist", sans-serif;
       font-size: 130px;
       font-weight: 600;
       line-height: 1; }
+      .header-banner-title-contact {
+        width: 100%;
+        font-size: 40px;
+        line-height: 1.15;
+        text-align: center; }
     .header-banner-text {
       width: 50%;
       font-size: 17px;
@@ -430,6 +450,44 @@ body {
     font-size: 17px;
     font-weight: 400;
     line-height: 1.8; }
+
+.learn-more-and-contact-form-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8rem;
+  height: 71rem;
+  margin: 10rem 0; }
+  .learn-more-and-contact-form-block .learn-more-container {
+    width: 40rem;
+    margin-top: 5rem; }
+  .learn-more-and-contact-form-block .learn-more-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.15; }
+  .learn-more-and-contact-form-block .learn-more-description {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-top: 2.4rem; }
+  .learn-more-and-contact-form-block .contact-form-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 5rem; }
+  .learn-more-and-contact-form-block .contact-form-input {
+    margin-top: 16px; }
+    .learn-more-and-contact-form-block .contact-form-input label {
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 0.5rem; }
+    .learn-more-and-contact-form-block .contact-form-input input,
+    .learn-more-and-contact-form-block .contact-form-input textarea {
+      width: 100%;
+      font-family: "Urbanist", sans-serif;
+      padding: 14px 8px;
+      border: 1px solid #ddd;
+      margin-top: 3px; }
 
 .brands {
   display: flex;
