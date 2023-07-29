@@ -19,16 +19,15 @@
     }
 
     .main-img-box {
-      width: 65rem;
-      height: 65rem;
+      width: 60rem;
+      height: 60rem;
       object-fit: cover;
     }
   }
 
   .product-detail-info {
-    width: 45rem;
+    width: 40rem;
     height: 48rem;
-    margin: 0 auto;
 
     .product-title {
       text-transform: none;
@@ -103,13 +102,13 @@
 
 .related-products {
   background-color: rgba($color-tertiary, 0.2);
-  padding: $margin-large;
+  padding: $margin-large 0;
 
   &-title {
     font-size: $font-size-large;
     font-weight: $font-weight-regular;
     line-height: $line-height-tiny;
-    margin-bottom: $margin-small;
+    margin-bottom: $margin-medium;
   }
 
   &-block {
@@ -119,8 +118,8 @@
   }
 
   .product-img-box {
-    width: 40rem;
-    height: 40rem;
+    width: 35rem;
+    height: 35rem;
     margin-bottom: $margin-x-small;
   }
 }

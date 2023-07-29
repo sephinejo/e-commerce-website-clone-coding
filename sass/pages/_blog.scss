@@ -1,0 +1,36 @@
+.blog {
+  &-post {
+    margin: $margin-large 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-img-box {
+      width: 100%;
+
+      .blog-post-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-content {
+      max-width: 90rem;
+    }
+
+    &-title {
+      font-size: $font-size-x-large;
+      font-weight: $font-weight-semi-bold;
+      line-height: $line-height-tiny;
+      cursor: pointer;
+      margin: $margin-small 0;
+    }
+
+    &-excerpt {
+      font-size: $font-size-medium;
+      font-weight: $font-weight-regular;
+      line-height: $line-height-normal;
+    }
+  }
+}

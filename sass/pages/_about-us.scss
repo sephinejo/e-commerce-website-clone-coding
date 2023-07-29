@@ -1,0 +1,142 @@
+.about-our-company-and-img {
+  display: flex;
+  flex-direction: column;
+
+  &-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8rem;
+    height: 50rem;
+    margin: $margin-large 0;
+
+    .about-our-company {
+      &-container {
+        width: 40rem;
+        margin-top: $margin-medium;
+      }
+
+      &-title {
+        font-size: $font-size-large;
+        font-weight: $font-weight-semi-bold;
+        line-height: $line-height-tiny;
+      }
+
+      &-description {
+        max-width: 84rem;
+        font-size: $font-size-medium;
+        font-weight: 400;
+        line-height: $line-height-normal;
+        margin-top: $margin-small;
+      }
+    }
+
+    .about-our-company-img-container {
+      height: 50rem;
+
+      .about-our-company-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.hand-made-furniture {
+  height: 55vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/asia-culturecenter-b0kpzPPXj1Y-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  color: $color-white;
+
+  position: relative;
+
+  &-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-text {
+    font-size: $font-size-large;
+    font-weight: $font-weight-regular;
+  }
+}
+
+.team {
+  padding: $margin-x-large 0;
+
+  &-title {
+    font-size: $font-size-large;
+    font-weight: $font-weight-semi-bold;
+    line-height: $line-height-tiny;
+  }
+
+  &-description {
+    font-size: $font-size-medium;
+    line-height: $line-height-normal;
+    margin-top: $margin-small;
+  }
+
+  &-members {
+    display: flex;
+    margin: $margin-medium 0;
+
+    .team-member {
+      height: 37rem;
+      border: 1px solid $color-tertiary;
+      padding: 20px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-img-box {
+        width: 15rem;
+        height: 15rem;
+        margin-bottom: $margin-small;
+      }
+
+      &-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      &-name {
+        font-size: $font-size-upper-medium;
+        font-weight: $font-weight-medium;
+        line-height: $line-height-tiny;
+        margin-bottom: $margin-x-small;
+      }
+
+      &-title {
+        color: $color-secondary;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-regular;
+        margin-bottom: $margin-small;
+      }
+
+      &-social-links {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .social-link-icon {
+          font-size: $font-size-medium;
+          margin-right: $margin-x-small;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

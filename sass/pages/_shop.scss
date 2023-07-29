@@ -34,6 +34,7 @@
 .shop-products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  column-gap: $margin-x-small;
   grid-template-rows: 54rem 54rem 54rem;
   column-gap: $margin-medium;
 }

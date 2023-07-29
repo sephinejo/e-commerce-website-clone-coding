@@ -2,6 +2,7 @@
   height: 10vh;
   background-color: transparent;
   margin-bottom: $margin-x-large;
+  position: relative;
 
   &-home {
     margin-bottom: 0;
@@ -18,8 +19,19 @@
     padding: 0 50px 100px;
   }
 
+  &-about-us {
+    height: 100vh;
+
+    .about-us-video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+  }
+
   &-logo-and-btns-block {
-    position: relative;
     height: 21rem;
     padding-bottom: 70px;
   }
@@ -81,6 +93,7 @@
     background-color: transparent;
     outline: none;
     border: none;
+    cursor: pointer;
 
     display: flex;
     flex-direction: column;
@@ -117,8 +130,9 @@
       font-size: $font-size-small;
       width: 2rem;
       height: 2rem;
-      border: 1px solid $color-white;
+      border: 1px solid $color-black;
       border-radius: 50%;
+      padding-top: 2px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -144,6 +158,10 @@
       font-size: $font-size-medium;
       line-height: 2;
       margin: 2.4rem 0 2.8rem;
+
+      &.about-us-banner-text {
+        line-height: $line-height-normal;
+      }
     }
   }
 }

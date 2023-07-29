@@ -18,4 +18,10 @@ body {
   .header-btns button {
     color: $color-white;
   }
+
+  .header-btn-cart {
+    .header-cart-number {
+      border: 1px solid $color-white;
+    }
+  }
 }
