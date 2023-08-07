@@ -19,9 +19,11 @@
       font-weight: 400;
     }
 
-    .menu-link {
+    .menu-link a {
       font-size: $font-size-medium;
       text-align: left;
+      display: inline-block;
+      padding-bottom: $margin-2x-small;
     }
 
     .social-links {

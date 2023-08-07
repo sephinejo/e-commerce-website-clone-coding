@@ -1,0 +1,63 @@
+.navigation {
+  transition: all 2s;
+
+  body :not(.navigation) {
+    filter: blur(15px);
+    overflow: hidden;
+  }
+
+  &-close-btn {
+    position: fixed;
+    height: 3rem;
+    width: 3rem;
+    top: 5rem;
+    left: 5rem;
+    cursor: pointer;
+    color: $color-black;
+    background-color: transparent;
+    z-index: 2000;
+  }
+
+  &-close-icon {
+    position: relative;
+    margin-top: 3.5rem;
+  }
+
+  &-nav {
+    position: fixed;
+    width: 48rem;
+    height: 100vh;
+    background-color: $color-white;
+    z-index: 1000;
+  }
+
+  &-list {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    list-style: none;
+    text-align: left;
+    width: 100%;
+  }
+
+  &-item {
+    margin: 1rem;
+  }
+
+  &-link {
+    &,
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: $font-size-upper-medium;
+      font-weight: 600;
+      padding: 1rem 5rem;
+      color: $color-black;
+    }
+
+    &:hover,
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}

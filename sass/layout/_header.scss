@@ -4,6 +4,10 @@
   margin-bottom: $margin-x-large;
   position: relative;
 
+  &::after {
+    transition: all 0.4s;
+  }
+
   &-home {
     margin-bottom: 0;
     height: 100vh;
@@ -40,6 +44,25 @@
         rgba($color-black, 0.5)
       ),
       url("https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/slidebean-6MtJ-y1hzTs-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+
+    &-container {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-my-account {
+    height: 51vh;
+    margin-bottom: 0;
+    background-image: linear-gradient(
+        0deg,
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)
+      ),
+      url("https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/katja-rooke-77JACslA8G0-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 50%;
@@ -108,6 +131,7 @@
   &-btn-menu {
     width: 42px;
     height: 13px;
+    margin-right: $margin-small;
 
     background-color: transparent;
     outline: none;
@@ -117,6 +141,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: width 0.3s ease-out;
+
+    &:hover {
+      opacity: 0.7;
+
+      .header-btn-menu-bottom {
+        width: 42px;
+        transition: width 0.3s ease;
+      }
+    }
 
     &-top {
       border: 1px solid $color-black;
@@ -136,13 +170,25 @@
   &-btn-icon {
     width: 24px;
 
+    &:hover {
+      opacity: 0.7;
+    }
+
     .icon-cart {
       z-index: -1;
     }
   }
 
+  &-btn-account {
+    margin-right: $margin-small;
+  }
+
   &-btn-cart {
     position: relative;
+
+    &:hover {
+      opacity: 0.7;
+    }
 
     .header-cart-number {
       font-family: inherit;
@@ -171,8 +217,15 @@
       justify-content: center;
     }
 
+    &-my-account {
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     &-title {
-      width: 40%;
+      width: 50%;
       font-family: $font-family-default;
       font-size: $font-size-max-130;
       font-weight: $font-weight-semi-bold;
@@ -184,10 +237,17 @@
         line-height: $line-height-tiny;
         text-align: center;
       }
+
+      &-my-account {
+        width: 100%;
+        font-size: $font-size-x-large;
+        line-height: $line-height-tiny;
+        text-align: center;
+      }
     }
 
     &-text {
-      width: 50%;
+      width: 55%;
       font-size: $font-size-medium;
       line-height: 2;
       margin: 2.4rem 0 2.8rem;

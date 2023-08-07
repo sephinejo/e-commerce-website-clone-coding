@@ -1,18 +1,7 @@
-.u-center-text {
-  text-align: center;
-}
-
-.u-margin-right-20 {
-  margin-right: 20px;
-}
-
-.u-margin-right-10 {
-  margin-right: 10px;
-}
-
 .u-section-separator {
   border-top: 1px solid $color-black;
-  width: 100%;
+  width: 1rem;
+  margin: 0 auto;
   margin-bottom: $margin-small;
 }
 
@@ -23,4 +12,8 @@
 
 .u-gray {
   color: $color-secondary;
+}
+
+.u-display {
+  display: none;
 }

@@ -1,3 +1,36 @@
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes movesFromCenter {
+  0% {
+    opacity: 0;
+    width: 0; }
+  100% {
+    opacity: 1;
+    width: 100%;
+    left: 0; } }
+
+@keyframes moveInBottomSlow {
+  0% {
+    opacity: 0;
+    transform: translateY(6rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes moveIntoCenter {
+  0% {
+    opacity: 0;
+    width: 100%; }
+  100% {
+    opacity: 1;
+    width: 0; } }
+
 *,
 *::after,
 *::before {
@@ -12,6 +45,9 @@ body {
   box-sizing: border-box;
   position: relative;
   -webkit-font-smoothing: antialiased; }
+  body.blur > :not(.navigation) {
+    overflow: hidden;
+    filter: blur(15px); }
 
 .container {
   max-width: 1400px;
@@ -22,6 +58,22 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer; }
+
+.banner-animated {
+  animation: moveInBottom 1s ease;
+  animation-fill-mode: both; }
+
+.p-animated {
+  animation: moveInBottomSlow 2s ease 0s;
+  animation-fill-mode: none; }
+
+.s-animated {
+  animation: movesFromCenter 2s ease-out 0s;
+  animation-fill-mode: none; }
+
+.footer-animated {
+  animation: movesIntoCenter 2s ease 0s;
+  animation-fill-mode: both; }
 
 body {
   font-family: "Urbanist", sans-serif;
@@ -42,18 +94,10 @@ body {
 .header-white .header-btn-cart .header-cart-number {
   border: 1px solid #fff; }
 
-.u-center-text {
-  text-align: center; }
-
-.u-margin-right-20 {
-  margin-right: 20px; }
-
-.u-margin-right-10 {
-  margin-right: 10px; }
-
 .u-section-separator {
   border-top: 1px solid #000;
-  width: 100%;
+  width: 1rem;
+  margin: 0 auto;
   margin-bottom: 2.4rem; }
 
 .u-separator {
@@ -62,6 +106,9 @@ body {
 
 .u-gray {
   color: #999; }
+
+.u-display {
+  display: none; }
 
 .breadcrumbs {
   margin-bottom: 1.5rem; }
@@ -99,6 +146,13 @@ body {
     background-color: #000;
     border: none; }
 
+.btn-form {
+  font-size: 15px;
+  display: inline-block;
+  margin-right: 1.5rem;
+  padding: 16px 64px;
+  height: 50px; }
+
 .btn-chevron-left {
   border: solid 2px #000;
   width: 40px;
@@ -125,7 +179,8 @@ body {
     height: 11.3px; }
 
 .product {
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.2s; }
   .product-img-box {
     position: relative;
     margin-bottom: 1rem; }
@@ -142,6 +197,9 @@ body {
   .product-img {
     width: 100%;
     height: 100%; }
+    .product-img:hover {
+      opacity: 0.65;
+      transition: opacity 0.3s; }
   .product-title {
     text-transform: uppercase;
     font-size: 17px;
@@ -169,9 +227,11 @@ body {
     .footer-top .menu-title {
       font-size: 24px;
       font-weight: 400; }
-    .footer-top .menu-link {
+    .footer-top .menu-link a {
       font-size: 17px;
-      text-align: left; }
+      text-align: left;
+      display: inline-block;
+      padding-bottom: 0.5rem; }
     .footer-top .social-links {
       display: flex; }
       .footer-top .social-links .social-link {
@@ -202,6 +262,8 @@ body {
   background-color: transparent;
   margin-bottom: 12rem;
   position: relative; }
+  .header::after {
+    transition: all 0.4s; }
   .header-home {
     margin-bottom: 0;
     height: 100vh;
@@ -226,6 +288,16 @@ body {
     background-size: cover;
     background-position-y: 50%; }
     .header-contact-container {
+      width: 100%;
+      height: 100%; }
+  .header-my-account {
+    height: 51vh;
+    margin-bottom: 0;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/katja-rooke-77JACslA8G0-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%; }
+    .header-my-account-container {
       width: 100%;
       height: 100%; }
   .header-logo-and-btns-block {
@@ -270,13 +342,20 @@ body {
   .header-btn-menu {
     width: 42px;
     height: 13px;
+    margin-right: 2.4rem;
     background-color: transparent;
     outline: none;
     border: none;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-between;
+    transition: width 0.3s ease-out; }
+    .header-btn-menu:hover {
+      opacity: 0.7; }
+      .header-btn-menu:hover .header-btn-menu-bottom {
+        width: 42px;
+        transition: width 0.3s ease; }
     .header-btn-menu-top {
       border: 1px solid #000;
       width: 42px; }
@@ -287,10 +366,16 @@ body {
     display: flex; }
   .header-btn-icon {
     width: 24px; }
+    .header-btn-icon:hover {
+      opacity: 0.7; }
     .header-btn-icon .icon-cart {
       z-index: -1; }
+  .header-btn-account {
+    margin-right: 2.4rem; }
   .header-btn-cart {
     position: relative; }
+    .header-btn-cart:hover {
+      opacity: 0.7; }
     .header-btn-cart .header-cart-number {
       font-family: inherit;
       font-size: 15px;
@@ -312,8 +397,13 @@ body {
       display: flex;
       align-items: center;
       justify-content: center; }
+    .header-banner-my-account {
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
     .header-banner-title {
-      width: 40%;
+      width: 50%;
       font-family: "Urbanist", sans-serif;
       font-size: 130px;
       font-weight: 600;
@@ -323,13 +413,93 @@ body {
         font-size: 40px;
         line-height: 1.15;
         text-align: center; }
+      .header-banner-title-my-account {
+        width: 100%;
+        font-size: 40px;
+        line-height: 1.15;
+        text-align: center; }
     .header-banner-text {
-      width: 50%;
+      width: 55%;
       font-size: 17px;
       line-height: 2;
       margin: 2.4rem 0 2.8rem; }
       .header-banner-text.about-us-banner-text {
         line-height: 1.8; }
+
+.navigation {
+  transition: all 2s; }
+  .navigation body :not(.navigation) {
+    filter: blur(15px);
+    overflow: hidden; }
+  .navigation-close-btn {
+    position: fixed;
+    height: 3rem;
+    width: 3rem;
+    top: 5rem;
+    left: 5rem;
+    cursor: pointer;
+    color: #000;
+    background-color: transparent;
+    z-index: 2000; }
+  .navigation-close-icon {
+    position: relative;
+    margin-top: 3.5rem; }
+  .navigation-nav {
+    position: fixed;
+    width: 48rem;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1000; }
+  .navigation-list {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    list-style: none;
+    text-align: left;
+    width: 100%; }
+  .navigation-item {
+    margin: 1rem; }
+  .navigation-link, .navigation-link:link, .navigation-link:visited {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 1rem 5rem;
+    color: #000; }
+  .navigation-link:hover, .navigation-link:active {
+    opacity: 0.6; }
+
+.search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1400px;
+  height: 13rem;
+  padding: 6rem 6rem 4rem;
+  background-color: #fff;
+  z-index: 1000; }
+  .search-input {
+    width: 90%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 17px;
+    font-weight: font-weight-regular;
+    color: #333;
+    line-height: 200%;
+    padding: 0 5px; }
+  .search-close-btn {
+    position: fixed;
+    height: 2.5rem;
+    width: 2.5rem;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    color: #000;
+    background-color: transparent;
+    z-index: 2000; }
+  .search-close-icon {
+    position: relative;
+    margin-top: 3.5rem; }
 
 .about-our-company-and-img {
   display: flex;
@@ -638,6 +808,61 @@ body {
       font-size: 32px;
       font-weight: 600; }
 
+.login-and-register-form-block {
+  display: grid;
+  grid-template-columns: 48rem 48rem;
+  column-gap: 4rem;
+  height: 58rem;
+  width: 100%;
+  margin: 10rem 0; }
+  .login-and-register-form-block .login-form form,
+  .login-and-register-form-block .register-form form {
+    height: 44.5rem;
+    padding: 2rem;
+    border: 1px solid #ddd; }
+  .login-and-register-form-block .login-form-title,
+  .login-and-register-form-block .register-form-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 34px; }
+  .login-and-register-form-block .login-form-input,
+  .login-and-register-form-block .register-form-input {
+    margin-top: 16px; }
+    .login-and-register-form-block .login-form-input label,
+    .login-and-register-form-block .register-form-input label {
+      display: block;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 0.5;
+      margin-bottom: 2.4rem; }
+    .login-and-register-form-block .login-form-input input,
+    .login-and-register-form-block .register-form-input input {
+      width: 100%;
+      font-family: "Urbanist", sans-serif;
+      padding: 12px 10px;
+      border: 1px solid #ddd;
+      margin-top: 3px;
+      margin-bottom: 17px; }
+      .login-and-register-form-block .login-form-input input:focus,
+      .login-and-register-form-block .register-form-input input:focus {
+        outline: none; }
+  .login-and-register-form-block .login-form .register-form-description-paragraph,
+  .login-and-register-form-block .register-form .register-form-description-paragraph {
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 17px 0; }
+    .login-and-register-form-block .login-form .register-form-description-paragraph-policy,
+    .login-and-register-form-block .register-form .register-form-description-paragraph-policy {
+      cursor: pointer;
+      text-decoration: underline; }
+      .login-and-register-form-block .login-form .register-form-description-paragraph-policy:hover,
+      .login-and-register-form-block .register-form .register-form-description-paragraph-policy:hover {
+        text-decoration: none; }
+    .login-and-register-form-block .login-form .register-form-description-paragraph:first-child,
+    .login-and-register-form-block .register-form .register-form-description-paragraph:first-child {
+      margin-top: 1px; }
+
 .product-detail {
   display: grid;
   grid-template-columns: 65% 35%;
@@ -763,7 +988,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12rem; }
+  margin-bottom: 12rem;
+  transition: all 0.25s; }
   .shop-btns .btn-shop {
     color: #000;
     font-size: 17px;
@@ -773,4 +999,12 @@ body {
     margin-right: 0.5rem; }
     .shop-btns .btn-shop.active {
       color: #fff;
-      background-color: #000; }
+      background-color: #000;
+      cursor: text; }
+    .shop-btns .btn-shop:hover:not(.active) {
+      background-color: #ddd;
+      opacity: 0.6;
+      transition: opacity 0.25s 0.1s ease; }
+      .shop-btns .btn-shop:hover:not(.active) > .page-number {
+        opacity: 0.5;
+        transition: opacity 0.25s 0s ease; }

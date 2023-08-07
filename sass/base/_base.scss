@@ -14,10 +14,15 @@ body {
   box-sizing: border-box;
   position: relative;
   -webkit-font-smoothing: antialiased;
+
+  &.blur > :not(.navigation) {
+    overflow: hidden;
+    filter: blur(15px);
+  }
 }
 
 .container {
-  max-width: $width-1400;
+  max-width: $width-max;
   margin: 0 auto;
   padding: 0 50px;
 }
@@ -26,4 +31,24 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+
+.banner-animated {
+  animation: moveInBottom 1s ease;
+  animation-fill-mode: both;
+}
+
+.p-animated {
+  animation: moveInBottomSlow 2s ease 0s;
+  animation-fill-mode: none;
+}
+
+.s-animated {
+  animation: movesFromCenter 2s ease-out 0s;
+  animation-fill-mode: none;
+}
+
+.footer-animated {
+  animation: movesIntoCenter 2s ease 0s;
+  animation-fill-mode: both;
 }

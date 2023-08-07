@@ -1,0 +1,39 @@
+.search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $width-max;
+  height: 13rem;
+  padding: 6rem 6rem 4rem;
+  background-color: $color-white;
+  z-index: 1000;
+
+  &-input {
+    width: 90%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $color-tertiary;
+    font-size: $font-size-medium;
+    font-weight: font-weight-regular;
+    color: $color-primary;
+    line-height: 200%;
+    padding: 0 5px;
+  }
+
+  &-close-btn {
+    position: fixed;
+    height: 2.5rem;
+    width: 2.5rem;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    color: $color-black;
+    background-color: transparent;
+    z-index: 2000;
+  }
+
+  &-close-icon {
+    position: relative;
+    margin-top: 3.5rem;
+  }
+}

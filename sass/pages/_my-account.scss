@@ -1,0 +1,70 @@
+.login-and-register-form-block {
+  display: grid;
+  grid-template-columns: 48rem 48rem;
+  column-gap: 4rem;
+  height: 58rem;
+  width: 100%;
+  margin: $margin-large 0;
+
+  .login-form,
+  .register-form {
+    & form {
+      height: 44.5rem;
+      padding: 2rem;
+      border: 1px solid $color-tertiary;
+    }
+
+    &-title {
+      font-size: $font-size-large;
+      font-weight: $font-weight-semi-bold;
+      line-height: $line-height-tiny;
+      margin-bottom: 34px;
+    }
+
+    &-input {
+      margin-top: 16px;
+
+      label {
+        display: block;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-regular;
+        line-height: 0.5;
+        margin-bottom: $margin-small;
+      }
+
+      input {
+        width: 100%;
+        font-family: $font-family-default;
+        padding: 12px 10px;
+        border: 1px solid $color-tertiary;
+        margin-top: 3px;
+        margin-bottom: 17px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .register-form-description {
+      &-paragraph {
+        font-size: $font-size-medium;
+        line-height: $line-height-normal;
+        margin: 17px 0;
+
+        &-policy {
+          cursor: pointer;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &:first-child {
+          margin-top: 1px;
+        }
+      }
+    }
+  }
+}
