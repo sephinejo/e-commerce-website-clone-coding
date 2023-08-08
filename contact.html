@@ -18,6 +18,70 @@
     <title>Contact - Vignette</title>
   </head>
   <body>
+    <div class="navigation u-display">
+      <label for="navi-toggle" class="navigation-close-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="navigation-close-icon">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </label>
+
+      <nav class="navigation-nav">
+        <ul class="navigation-list banner-animated">
+          <li class="navigation-item">
+            <a href="index.html" class="navigation-link">
+              Home
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a href="shop.html" class="navigation-link">
+              Shop
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a href="about-us.html" class="navigation-link">
+              About Us
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a href="blog.html" class="navigation-link">
+              Blog
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a href="contact.html" class="navigation-link">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="search u-display">
+      <div class="search-close-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="search-close-icon">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </div>
+
+      <div class="search-form">
+        <label for="search"></label>
+        <input class="search-input" type="text" name='search' id="search" placeholder="Search products...">
+      </div>
+    </div>
+
+    <div class="cart u-display">
+      <div class="cart-close-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cart-close-icon">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </div>
+
+      <div class="cart-block">
+        <p class="cart-message">Your cart is currently empty!</p>
+        <button class="btn btn-border-black btn-form">START SHOPPING</button>
+      </div>
+    </div>
+
     <header class="header header-contact header-white">
       <section class="container header-contact-container">
         <div class="header-logo-and-btns-block">
@@ -58,7 +122,7 @@
               </a>
             </div>
             <div class="header-btns-box">
-              <a href="#" class="header-btn-account u-margin-right-20"
+              <a href="my-account.html" class="header-btn-account u-margin-right-20"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -139,7 +203,6 @@
     </div>
     
     <footer class="footer">
-      <div class="container">
         <section class="footer-top">
           <div class="menu-block">
             <h4 class="menu-title">Categories</h4>
@@ -175,7 +238,6 @@
           <p class="copyright">© 2023 Vignette theme. All rights reserved.</p>
         </section>
         <img class="footer-payments" src="https://demo.vivathemes.com/vignette/wp-content/themes/vignette/assets/images/payments.png" alt="Payments demo">
-      </div>
     </footer>
 
     <script src="main.js"></script>

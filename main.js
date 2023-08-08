@@ -5,6 +5,9 @@ const navigation = document.querySelector(".navigation");
 const searchBtn = document.querySelector(".header-btn-search");
 const search = document.querySelector(".search");
 const searchCloseBtn = document.querySelector(".search-close-btn");
+const cartBtn = document.querySelector(".header-btn-cart");
+const cart = document.querySelector(".cart");
+const cartCloseBtn = document.querySelector(".cart-close-btn");
 
 navigationOpenBtn.addEventListener("click", () => {
   navigation.classList.remove("u-display");
@@ -22,6 +25,16 @@ searchBtn.addEventListener("click", () => {
 
 searchCloseBtn.addEventListener("click", () => {
   search.classList.add("u-display");
+});
+
+cartBtn.addEventListener("click", () => {
+  cart.classList.remove("u-display");
+  body.classList.add("blur");
+});
+
+cartCloseBtn.addEventListener("click", () => {
+  cart.classList.add("u-display");
+  body.classList.remove("blur");
 });
 
 const observer = new IntersectionObserver((entries) => {

@@ -1,11 +1,26 @@
 .product-detail {
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 60% 30%;
+  column-gap: 4rem;
   margin-bottom: $margin-large;
+
+  @include respond(tablet) {
+    display: flex;
+    flex-direction: column;
+  }
 
   &-imgs-block {
     display: flex;
     gap: $gap-small;
+
+    @include respond(tablet) {
+      margin-bottom: $margin-large;
+    }
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
 
     .sub-imgs {
       display: flex;
@@ -15,6 +30,21 @@
       .sub-img-box {
         width: 12.7rem;
         height: 12.7rem;
+
+        @include respond(laptop) {
+          width: 8rem;
+          height: 8rem;
+        }
+      }
+
+      @include respond(tablet) {
+        order: 0;
+      }
+
+      @include respond(phone) {
+        display: flex;
+        flex-direction: row;
+        order: 3;
       }
     }
 
@@ -22,12 +52,42 @@
       width: 60rem;
       height: 60rem;
       object-fit: cover;
+
+      @include respond(tablet) {
+        width: 28rem;
+        height: 28rem;
+      }
+
+      @include respond(mobile) {
+        width: 28rem;
+        height: 28rem;
+      }
+    }
+
+    .product-img {
+      width: 100%;
+      height: 100%;
     }
   }
 
   .product-detail-info {
-    width: 40rem;
+    width: 38rem;
     height: 48rem;
+
+    @include respond(laptop) {
+      width: 30rem;
+      height: 48rem;
+    }
+
+    @include respond(tablet) {
+      width: 70rem;
+      height: 48rem;
+    }
+
+    @include respond(phone) {
+      width: 28rem;
+      height: 40rem;
+    }
 
     .product-title {
       text-transform: none;
@@ -115,11 +175,34 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: $margin-medium;
+
+    @include respond(tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      column-gap: $margin-x-small;
+      row-gap: $margin-x-small;
+    }
   }
 
   .product-img-box {
-    width: 35rem;
-    height: 35rem;
+    width: 28rem;
+    height: 28rem;
     margin-bottom: $margin-x-small;
+
+    @include respond(laptop) {
+      width: 20rem;
+      height: 20rem;
+    }
+
+    @include respond(tablet) {
+      width: 30rem;
+      height: 30rem;
+    }
+
+    @include respond(phone) {
+      width: 12rem;
+      height: 12rem;
+    }
   }
 }

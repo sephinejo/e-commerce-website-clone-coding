@@ -1,0 +1,55 @@
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 48rem;
+  height: 100vh;
+  background-color: $color-white;
+  z-index: 1000;
+
+  @include respond(tablet) {
+    max-width: 48rem;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  &-close-btn {
+    position: fixed;
+    height: 2.5rem;
+    width: 2.5rem;
+    top: 4rem;
+    right: 2rem;
+    cursor: pointer;
+    color: $color-black;
+    background-color: transparent;
+    z-index: 2000;
+  }
+
+  &-close-icon {
+    position: relative;
+    margin-top: 3.5rem;
+  }
+
+  &-block {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 16px 16px;
+
+    .cart-message {
+      font-size: 1.6rem;
+      font-weight: $font-weight-bold;
+      margin: 16px 0;
+    }
+
+    & button {
+      margin: 0;
+      font-weight: $font-weight-semi-bold;
+    }
+  }
+}

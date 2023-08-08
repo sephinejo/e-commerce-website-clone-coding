@@ -3,9 +3,26 @@
   color: $color-footer;
   padding: 16rem 5rem 8rem;
 
+  @include respond(phone) {
+    padding: 16rem 2rem 8rem;
+  }
+
   &-top {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    @include respond(tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 4rem;
+    }
+
+    @include respond(tablet) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr auto;
+      row-gap: 4rem;
+    }
 
     .menu-block {
       height: 22rem;
@@ -50,6 +67,11 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: $margin-large;
+
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .policy-and-contact-block {
@@ -58,10 +80,18 @@
     .policy {
       margin-right: $margin-small;
     }
+
+    @include respond(phone) {
+      margin-bottom: $margin-small;
+    }
   }
 
   &-payments {
     height: 2.85rem;
     margin-top: $margin-small;
+
+    @include respond(phone) {
+      height: 2rem;
+    }
   }
 }

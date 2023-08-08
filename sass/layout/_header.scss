@@ -4,6 +4,14 @@
   margin-bottom: $margin-x-large;
   position: relative;
 
+  & .container {
+    padding: 0 50px 100px;
+
+    @include respond(tablet) {
+      padding: 0 2rem 10rem;
+    }
+  }
+
   &::after {
     transition: all 0.4s;
   }
@@ -21,10 +29,24 @@
     background-repeat: no-repeat;
     background-position-x: 50%;
     padding: 0 50px 100px;
+
+    @include respond(laptop) {
+      height: 83rem;
+    }
+
+    @include respond(tablet) {
+      height: 68rem;
+      padding: 0 2rem 10rem;
+    }
+
+    @include respond(phone) {
+      height: 83rem;
+    }
   }
 
   &-about-us {
-    height: 100vh;
+    height: 70rem;
+    margin-bottom: 0;
 
     .about-us-video {
       position: absolute;
@@ -33,10 +55,22 @@
       object-fit: cover;
       z-index: -2;
     }
+
+    @include respond(laptop) {
+      height: 99rem;
+    }
+
+    @include respond(tablet) {
+      height: 68rem;
+    }
+
+    @include respond(phone) {
+      height: 85rem;
+    }
   }
 
   &-contact {
-    height: 50vh;
+    height: 48rem;
     margin-bottom: 0;
     background-image: linear-gradient(
         0deg,
@@ -55,7 +89,7 @@
   }
 
   &-my-account {
-    height: 51vh;
+    height: 48rem;
     margin-bottom: 0;
     background-image: linear-gradient(
         0deg,
@@ -209,27 +243,51 @@
 
   &-banner {
     color: $color-white;
+    width: 65rem;
+
+    @include respond(laptop) {
+      width: 46rem;
+    }
+
+    @include respond(tablet) {
+      width: 38rem;
+    }
+
+    @include respond(phone) {
+      width: 28rem;
+    }
 
     &-contact {
-      height: 50%;
+      width: 100%;
+      height: 80%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     &-my-account {
-      height: 50%;
+      width: 100%;
+      height: 80%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     &-title {
-      width: 50%;
+      width: 100%;
       font-family: $font-family-default;
       font-size: $font-size-max-130;
       font-weight: $font-weight-semi-bold;
       line-height: 1;
+
+      @include respond(tablet) {
+        font-size: 7.4rem;
+      }
+
+      @include respond(phone) {
+        word-wrap: break-word;
+        font-size: 7.4rem;
+      }
 
       &-contact {
         width: 100%;
@@ -247,13 +305,17 @@
     }
 
     &-text {
-      width: 55%;
+      width: 100%;
       font-size: $font-size-medium;
       line-height: 2;
       margin: 2.4rem 0 2.8rem;
 
       &.about-us-banner-text {
         line-height: $line-height-normal;
+      }
+
+      @include respond(phone) {
+        margin: 2.8rem 0 2.8rem;
       }
     }
   }

@@ -15,7 +15,7 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
 
-  &.blur > :not(.navigation) {
+  &.blur > :not(.navigation):not(.cart) {
     overflow: hidden;
     filter: blur(15px);
   }
@@ -25,6 +25,14 @@ body {
   max-width: $width-max;
   margin: 0 auto;
   padding: 0 50px;
+
+  @include respond(tablet) {
+    padding: 0 20px;
+  }
+
+  @include respond(phone) {
+    padding: 0 21px;
+  }
 }
 
 a {

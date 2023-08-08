@@ -1,6 +1,10 @@
 // MAX-WIDTH
 $width-max: 1400px;
 
+@include respond(phone) {
+  $width-max: 38rem;
+}
+
 // COLORS
 $color-primary: #333;
 $color-secondary: #999;

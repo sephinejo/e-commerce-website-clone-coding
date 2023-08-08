@@ -19,7 +19,6 @@
   </head>
   <body>
     <div class="navigation u-display">
-
       <label for="navi-toggle" class="navigation-close-btn">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="navigation-close-icon">
           <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -70,8 +69,21 @@
       </div>
     </div>
 
+    <div class="cart u-display">
+      <div class="cart-close-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cart-close-icon">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </div>
+
+      <div class="cart-block">
+        <p class="cart-message">Your cart is currently empty!</p>
+        <button class="btn btn-border-black btn-form">START SHOPPING</button>
+      </div>
+    </div>
+
     <header class="header header-home header-white">
-      <section class="container">
+      <!-- <section class="container"> -->
         <div class="header-logo-and-btns-block">
           <div class="header-logo-block">
             <div class="header-logo-box">
@@ -155,7 +167,7 @@
           </p>
           <button class="btn btn-border banner-animated" style='animation-delay: .75s' onclick="window.location.href = 'shop.html'">SHOP ALL ITEMS</button>
         </div>
-      </section>
+      <!-- </section> -->
     </header>
 
     <div class="container">
@@ -473,6 +485,7 @@
                 </div>
               </div>
             </div>
+
             <div class="product home-product">
               <div class="product-img-box home-product-img-box">
                 <img
@@ -490,7 +503,8 @@
                 </div>
               </div>
             </div>
-            <div class="product-price-now home-product">
+
+            <div class="product home-product">
               <div class="product-img-box home-product-img-box">
                 <img
                   src="https://demo.vivathemes.com/vignette/wp-content/uploads/2022/10/luca-bravo-iGQKvAiIpPI-unsplash-800x800.jpg"
@@ -507,6 +521,7 @@
                 </div>
               </div>
             </div>
+
             <div class="product home-product">
               <div class="product-img-box home-product-img-box">
                 <img
@@ -529,9 +544,10 @@
       </section>
     </div>
 
-    <section class="custom-features animated">
+    <section class="custom-features">
         <div class="container custom-features-inner-container">
           <h3 class="custom-features-title">Custom features</h3>
+          <div class="custom-features-container">
           <div class="custom-features-block">
             <h4 class="sub-title">New designs</h4>
             <p class="description">
@@ -561,100 +577,97 @@
             </p>
           </div>
         </div>
+        </div>
     </section>
 
-    <div class="container">
-      <section class="container learn-more-and-video">
-        <div class="learn-more-and-video-box">
-          <div class="learn-more">
-            <div class="learn-more-container animated">
-              <h4 class="learn-more-title">Learn more about our process</h4>
-              <p class="learn-more-description">
-                Designers must balance both the logic and lyricism of humanity
-                every time they design something, a task that requires a
-                singularly mysterious skill.
-              </p>
-              <button class="btn btn-border btn-border-black learn-more-btn" onclick="window.location.href = 'about-us.html'">
-                ABOUT US
-              </button>
-            </div>
-          </div>
-          <div class="learn-more-video-container">
-            <video
-              src="https://demo.vivathemes.com/vignette/wp-content/uploads/2022/11/office.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              class="video"
-            ></video>
+    <section class="container learn-more-and-video">
+      <div class="learn-more-and-video-box">
+        <div class="learn-more">
+          <div class="learn-more-container animated">
+            <h4 class="learn-more-title">Learn more about our process</h4>
+            <p class="learn-more-description">
+              Designers must balance both the logic and lyricism of humanity
+              every time they design something, a task that requires a
+              singularly mysterious skill.
+            </p>
+            <button class="btn btn-border btn-border-black learn-more-btn" onclick="window.location.href = 'about-us.html'">
+              ABOUT US
+            </button>
           </div>
         </div>
+        <div class="learn-more-video-container">
+          <video
+            src="https://demo.vivathemes.com/vignette/wp-content/uploads/2022/11/office.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            class="video"
+          ></video>
+        </div>
+      </div>
 
-        <div class="u-section-separator"></div>
+      <div class="u-section-separator"></div>
 
-        <section class="shop-by-category">
-          <h4 class="shop-by-category-title">Shop by category</h4>
-          <div class="shop-by-category-block animated">
-            <div class="shop-by-category-product chairs">
-              <span class="shop-by-category-product-title">Chairs</span>
-              <button class="btn btn-border">SHOP NOW</button>
-            </div>
-            <div class="shop-by-category-product kitchen">
-              <span class="shop-by-category-product-title">Kitchen</span>
-              <button class="btn btn-border">SHOP NOW</button>
-            </div>
-            <div class="shop-by-category-product sofas">
-              <span class="shop-by-category-product-title">Sofas</span>
-              <button class="btn btn-border">SHOP NOW</button>
-            </div>
-            <div class="shop-by-category-product tables">
-              <span class="shop-by-category-product-title">Tables</span>
-              <button class="btn btn-border">SHOP NOW</button>
-            </div>
+      <section class="shop-by-category">
+        <h4 class="shop-by-category-title">Shop by category</h4>
+        <div class="shop-by-category-block animated">
+          <div class="shop-by-category-product chairs">
+            <span class="shop-by-category-product-title">Chairs</span>
+            <button class="btn btn-border">SHOP NOW</button>
           </div>
-        </section>
+          <div class="shop-by-category-product kitchen">
+            <span class="shop-by-category-product-title">Kitchen</span>
+            <button class="btn btn-border">SHOP NOW</button>
+          </div>
+          <div class="shop-by-category-product sofas">
+            <span class="shop-by-category-product-title">Sofas</span>
+            <button class="btn btn-border">SHOP NOW</button>
+          </div>
+          <div class="shop-by-category-product tables">
+            <span class="shop-by-category-product-title">Tables</span>
+            <button class="btn btn-border">SHOP NOW</button>
+          </div>
+        </div>
       </section>
-    </div>
+    </section>
 
     <footer class="footer">
-      <div class="container">
-        <section class="footer-top">
-          <div class="menu-block">
-            <h4 class="menu-title">Categories</h4>
-              <span class="menu-link"><a href="#" class="btn">Chairs</a href="#"></span>
-              <span class="menu-link"><a href="#" class="btn">Kitchen</a href="#"></span>
-              <span class="menu-link"><a href="#" class="btn">Sofas</a href="#"></span>
-              <span class="menu-link"><a href="#" class="btn">Tables</a href="#"></span>
+      <section class="footer-top">
+        <div class="menu-block">
+          <h4 class="menu-title">Categories</h4>
+            <span class="menu-link"><a href="#" class="btn">Chairs</a href="#"></span>
+            <span class="menu-link"><a href="#" class="btn">Kitchen</a href="#"></span>
+            <span class="menu-link"><a href="#" class="btn">Sofas</a href="#"></span>
+            <span class="menu-link"><a href="#" class="btn">Tables</a href="#"></span>
+        </div>
+        <div class="menu-block">
+          <h4 class="menu-title">Quick Menu</h4>
+          <span class="menu-link"><a href="index.html" class="btn menu-link">Home</a href="#"></span>
+          <span class="menu-link"><a href="shop.html" class="btn menu-link">Shop</a href="#"></span>
+          <span class="menu-link"><a href="blog.html" class="btn menu-link">Blog</a href="#"></span>
+          <span class="menu-link"><a href="contact.html" class="btn menu-link">Contact</a href="#"></span>
+        </div>
+        <div class="social-links">
+          <div class="social-link">
+            <a href="#"><i class="fa-brands fa-facebook social-link-icon"></i></a>
           </div>
-          <div class="menu-block">
-            <h4 class="menu-title">Quick Menu</h4>
-            <span class="menu-link"><a href="index.html" class="btn menu-link">Home</a href="#"></span>
-            <span class="menu-link"><a href="shop.html" class="btn menu-link">Shop</a href="#"></span>
-            <span class="menu-link"><a href="blog.html" class="btn menu-link">Blog</a href="#"></span>
-            <span class="menu-link"><a href="contact.html" class="btn menu-link">Contact</a href="#"></span>
+          <div class="social-link">
+            <a href="#"><i class="fa-brands fa-twitter social-link-icon"></i></a>
           </div>
-          <div class="social-links">
-            <div class="social-link">
-              <a href="#"><i class="fa-brands fa-facebook social-link-icon"></i></a>
-            </div>
-            <div class="social-link">
-              <a href="#"><i class="fa-brands fa-twitter social-link-icon"></i></a>
-            </div>
-            <div class="social-link">
-              <a href="#"><i class="fa-brands fa-instagram social-link-icon"></i></a>
-            </div>
+          <div class="social-link">
+            <a href="#"><i class="fa-brands fa-instagram social-link-icon"></i></a>
           </div>
-        </section>
-        <section class="footer-bottom">
-          <div class="policy-and-contact-block">
-            <a href="#" class="policy">Refund and Returns Policy</a>
-            <a href="contact.html" class="contact">Contact</a>
-          </div>
-          <p class="copyright">© 2023 Vignette theme. All rights reserved.</p>
-        </section>
-        <img class="footer-payments" src="https://demo.vivathemes.com/vignette/wp-content/themes/vignette/assets/images/payments.png" alt="Payments demo">
-      </div>
+        </div>
+      </section>
+      <section class="footer-bottom">
+        <div class="policy-and-contact-block">
+          <a href="#" class="policy">Refund and Returns Policy</a>
+          <a href="contact.html" class="contact">Contact</a>
+        </div>
+        <p class="copyright">© 2023 Vignette theme. All rights reserved.</p>
+      </section>
+      <img class="footer-payments" src="https://demo.vivathemes.com/vignette/wp-content/themes/vignette/assets/images/payments.png" alt="Payments demo">
     </footer>
 
     <script src="main.js"></script>
